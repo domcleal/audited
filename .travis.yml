@@ -16,9 +16,9 @@ before_install:
   - "travis_retry gem update --system"
   # Rails 4.2 has a bundler 1.x requirement
   - if [ $BUNDLE_GEMFILE = $PWD/gemfiles/rails42.gemfile ]; then
-      travis_retry gem install -v 1.17.3 bundler
+      travis_retry gem install -v 1.17.3 bundler;
     else
-      travis_retry gem install bundler
+      travis_retry gem install bundler;
     fi
 gemfile:
   - gemfiles/rails42.gemfile
